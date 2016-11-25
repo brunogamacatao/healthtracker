@@ -1,0 +1,34 @@
+<% if (!_.isEmpty(foods)) { %>
+  <table class='table table-bordered table-hover table-striped'>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Brand</th>
+        <th>Food</th>
+        <th>Size</th>
+        <th>Calories</th>
+        <th>Fat</th>
+        <th>Sugar</th>
+        <th>Protein</th>
+      <tr>
+    </thead>
+    <tbody>
+    <% for (var i in foods) {%>
+      <tr>
+        <td><button type='button' 
+                    class='add_food_btn btn btn-primary' 
+                    data-id='<%= foods[i].id %>'>+</button></td>
+        <td><%= foods[i].brand %></td>
+        <td><%= foods[i].name %></td>
+        <td>
+          <%= foods[i].size %> 
+        </td>
+        <td><%= foods[i].calories %> kcal</td>
+        <td><%= foods[i].fat %> g</td>
+        <td><%= foods[i].sugar %> g</td>
+        <td><%= foods[i].protein %> g</td>
+      </tr>
+    <% } %>
+    </tbody>
+  </table>
+<% } %>

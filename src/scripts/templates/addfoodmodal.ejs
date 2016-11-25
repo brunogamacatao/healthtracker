@@ -1,0 +1,62 @@
+<div class="modal fade" tabindex="-1" role="dialog" id="add_food_modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Add Food</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Quantity</label>
+            <div class="col-sm-10">
+              <input type="number" step="0.1" min="0" class="form-control" id="food_quantity" value="1.0">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <span class="form-control"><%= food.brand %> - <%= food.name %></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Size</label>
+            <div class="col-sm-10">
+              <span class="form-control"><%= food.size %></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Calories</label>
+            <div class="col-sm-10">
+              <span class="form-control"><%= food.calories %> kcal</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Total Fat</label>
+            <div class="col-sm-10">
+              <span class="form-control"><%= food.fat %> g</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Sugar</label>
+            <div class="col-sm-10">
+              <span class="form-control"><%= food.sugar %> g</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Protein</label>
+            <div class="col-sm-10">
+              <span class="form-control"><%= food.protein %> g</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="add_food_modal_btn">Add</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

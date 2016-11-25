@@ -1,0 +1,50 @@
+<% if (!_.isEmpty(foods)) { %>
+  <table class='table table-bordered table-hover table-striped'>
+    <thead>
+      <tr>
+        <th>Quantity</th>
+        <th>Brand</th>
+        <th>Food</th>
+        <th>Size</th>
+        <th>Calories</th>
+        <th>Fat</th>
+        <th>Sugar</th>
+        <th>Protein</th>
+        <th></th>
+      <tr>
+    </thead>
+    <tbody>
+    <% for (var i in foods) {%>
+      <tr>
+        <td class="col-md-2">
+          <input class="form-control food_quantity" 
+            type="number" step="0.1" min="0"
+            data-id='<%= foods[i].id %>'
+            value="<%= foods[i].quantity %>">          
+        </td>
+        <td><%= foods[i].brand %></td>
+        <td><%= foods[i].name %></td>
+        <td><%= foods[i].size %></td>
+        <td><%= foods[i].calories %> kcal</td>
+        <td><%= foods[i].fat %> g</td>
+        <td><%= foods[i].sugar %> g</td>
+        <td><%= foods[i].protein %> g</td>
+        <td><button type='button' 
+            class='remove_food_btn btn btn-danger' 
+            data-id='<%= foods[i].id %>'>-</button></td>
+      </tr>
+    <% } %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="4">TOTALS</th>
+        <th><%= totals.calories.toFixed(2) %> kcal</th>
+        <th><%= totals.fat.toFixed(2) %> g</th>
+        <th><%= totals.sugar.toFixed(2) %> g</th>
+        <th><%= totals.protein.toFixed(2) %> g</th>
+      </tr>
+    </tfoot>
+  </table>
+<% } else { %>
+  <p>You have not added any food. Try adding some in the form above.</p>
+<% } %>
