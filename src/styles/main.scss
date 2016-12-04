@@ -2,6 +2,11 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstr
 
 @import 'bootstrap-sass-official/assets/stylesheets/bootstrap.scss';
 
+/* Updating modal sizing for smalling screens (tablets and smartphones) */
+@media (max-width: $screen-xs-min) {
+  .modal-xs { width: $modal-sm; }
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;

@@ -43,9 +43,9 @@ Healthtracker.Views = Healthtracker.Views || {};
 
       _.each(Healthtracker.Singletons.trackedFoods.toJSON(), function(food) {
         totals.calories += food.calories;
-        totals.fat += food.fat;
-        totals.sugar += food.sugar;
-        totals.protein += food.protein;
+        totals.fat      += food.fat;
+        totals.sugar    += food.sugar;
+        totals.protein  += food.protein;
       });
 
       var model = {

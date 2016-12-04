@@ -1,4 +1,5 @@
 <% if (!_.isEmpty(foods)) { %>
+<div class='table-responsive'>
   <table class='table table-bordered table-hover table-striped'>
     <thead>
       <tr>
@@ -11,7 +12,7 @@
         <th>Sugar</th>
         <th>Protein</th>
         <th></th>
-      <tr>
+      </tr>
     </thead>
     <tbody>
     <% for (var i in foods) {%>
@@ -45,6 +46,7 @@
       </tr>
     </tfoot>
   </table>
+</div>
 <% } else { %>
   <p>You have not added any food. Try adding some in the form above.</p>
 <% } %>

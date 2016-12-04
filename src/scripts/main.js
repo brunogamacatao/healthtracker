@@ -23,6 +23,7 @@ window.Healthtracker = {
     new Healthtracker.Views.FoodTable({ collection: foods });
     new Healthtracker.Views.CaloriesDisplay();
     new Healthtracker.Views.SelectedFoodsTable();
+    new Healthtracker.Views.ErrorModal();
   }
 };
 
