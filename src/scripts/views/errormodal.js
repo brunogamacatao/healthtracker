@@ -20,6 +20,7 @@ Healthtracker.Views = Healthtracker.Views || {};
     },
     render: function (errorMessage) {
       this.$el.html(this.template({message: errorMessage}));
+      $('#loading_div').hide();
       $('#component_error_modal').modal('show');
     }
   });

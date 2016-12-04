@@ -7,6 +7,11 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/assets/fonts/bootstr
   .modal-xs { width: $modal-sm; }
 }
 
+/* The loading div, should not be displayed at startup */
+#loading_div {
+  display: none;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;

@@ -24,6 +24,7 @@ Healthtracker.Views = Healthtracker.Views || {};
         this.collection.reset();
         this.render();
       } else {
+        $('#loading_div').show();
         this.collection.search(value).success(this.render);
       }
     },
@@ -41,6 +42,7 @@ Healthtracker.Views = Healthtracker.Views || {};
       modal.render();
     },
     render: function () {
+      $('#loading_div').hide();
       var fetchedFoods = this.collection.toJSON()[0] || [];
       this.$el.html(this.template({foods: fetchedFoods}));
     }
